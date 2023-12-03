@@ -471,7 +471,7 @@ public class Main {
 
 
         System.out.println("\n\n\n//14. Интерфейсы часть 1.");
- /*     https://topjava.ru/blog/istoriya-evolutsii-interfeysov-v-java   ТОП СТАТЬЯ!!!!!!!!!!!!!
+ /*     https://topjava.ru/blog/istoriya-evolutsii-interfeysov-v-java   ТОП СТАТЬЯ!!!!!!!!!!!!!!!!
         Зачем использовать интерфейсы?
         Описание: Мы создали интерфейс Swimmable — «умеющий плавать». Это что-то вроде нашего пульта, у которого есть
         одна «кнопка»: метод swim()  — «плыть».
