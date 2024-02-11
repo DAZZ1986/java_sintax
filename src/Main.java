@@ -19,6 +19,11 @@ import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
+
+        //КУРС СЕМИНА
+        //F:\CODE\Курс\Java\[SW.BAND] [Udemy] Andrey Sumin - Java с нуля до Junior + Подготовка к собеседованию (2020)
+
+
         //Паттерн builder
 /*
         PersonBuilder personBuilder = new PersonBuilderImpl();
@@ -471,15 +476,14 @@ public class Main {
 
 
 
-
         System.out.println("\n\n\n//14. Интерфейсы часть 1.");
  /*     https://topjava.ru/blog/istoriya-evolutsii-interfeysov-v-java   ТОП СТАТЬЯ!!!!!!!!!!!!!!!!
         (см. парралльно interface \java_sintax\src\Interface\Test.java)
 
         Зачем использовать интерфейсы?
+        Интерфейс нужен только для описания возмоностей класса, без написания реализации. Мы создали интерфейс Swimmable —
+        «умеющий плавать». Это что-то вроде нашего пульта, у которого есть одна «кнопка»: метод swim()  — «плыть».
 
-        Описание: Мы создали интерфейс Swimmable — «умеющий плавать». Это что-то вроде нашего пульта, у которого есть
-        одна «кнопка»: метод swim()  — «плыть».
         Как же нам этот «пульт» использовать?
         Для этого метод, т.е. кнопку нашего пульта, нужно имплементировать. Чтобы использовать интерфейс, его методы
         должны реализовать какие-то классы нашей программы.
@@ -568,6 +572,7 @@ public class Main {
 //            }
 //        }
 
+        //код с урока
         TestImpl test = new TestImpl();
         System.out.println(test.woot2());
 
@@ -641,7 +646,26 @@ public class Main {
         flyable.fly();
 
 
+
+
+
+
         System.out.println("\n\n\n//15. Интерфейсы часть 2. Анонимные классы.");
+        //Вариант 1
+        Director director = new Director();
+        Coocker coocker = new Coocker();
+        director.force(coocker);    //тут в качестве параметра, нужен объект класса, который реализует интерфейс Coocable
+
+        //Вариант 2
+        //Если нам нужно сделать это один раз, то нет смысла создавать целый класс повар итд, можно просто использовать
+        //анонимный класс.
+        Director director2 = new Director();
+        director.force(new Coocable() {  //тут в качестве параметра, нужен объект класса, который реализует интерфейс Coocable
+            @Override
+            public void cook() {
+                System.out.println("Coocking");
+            }
+        });
 
 
 
@@ -658,13 +682,41 @@ public class Main {
 
 
 
+        System.out.println("\n\n\n\n\n\n\n  //[SW.BAND] 4. Java продвинутый уровень \n");
+        System.out.println("//1. Обработка исключений.mp4 \n");
+
+        int a = 1;
+
+        try {
+            int b = 7 / a;
+            String s = "21s";
+            int i = Integer.parseInt(s);
+
+        } catch(ArithmeticException e) {
+            System.out.println("Exception: ArithmeticException!");
+        } catch(NumberFormatException e) {
+            System.out.println("Exception: NumberFormatException!");
+        } catch(Exception e) {
+            System.out.println("Exception: Other exceptions!");
+        } finally {
+            System.out.println("finally block.");
+        }
+        System.out.println("Privet after try catch");
 
 
 
+        System.out.println("\n\n DZ \n\n");
+        int[] arr = {1,2,3};
 
+        try {
+            int b = arr[3];
+            System.out.println(b);
 
-
-
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println("Exception DZ: ArrayIndexOutOfBoundsException!");
+        } catch(Exception e) {
+            System.out.println("Exception DZ: Other exceptions!");
+        }
 
 
 
