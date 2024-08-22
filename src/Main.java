@@ -1,21 +1,11 @@
 import Interface.*;
-import Modificator.EngineRocket;
-import Modificator.Rockets;
-import Nascar.*;
-import Person.*;
 import inheridance.Cat;
 import inheridance.DZ.ColorRect;
-import inheridance.DZ.Figure;
 import inheridance.DZ.Rect;
 import inheridance.DZ.Triangle;
 import inheridance.Lion;
-import main.MyArryaList;
 
-import java.io.Flushable;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -477,7 +467,7 @@ public class Main {
 
 
         System.out.println("\n\n\n//14. Интерфейсы часть 1.");
- /*     https://topjava.ru/blog/istoriya-evolutsii-interfeysov-v-java   ТОП СТАТЬЯ!!!!!!!!!!!!!!!!
+ /*     https://topjava.ru/blog/istoriya-evolutsii-interfeysov-v-java   ТОП СТАТЬЯ!!!!!!!!!!!!!!!!!
         (см. парралльно interface \java_sintax\src\Interface\Test.java)
 
         Зачем использовать интерфейсы?
