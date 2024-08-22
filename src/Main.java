@@ -6,6 +6,7 @@ import inheridance.DZ.Triangle;
 import inheridance.Lion;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -501,7 +502,9 @@ public class Main {
 
         //методы:
         //- все методы в интерфейсе по умолчанию являются публичными и абстрактными
-        //- с Java 8, интерфейсы могут содержать помимо абстрактных, статические и дефолтные(с реализацией) методы
+        //- с Java 8, интерфейсы могут содержать методы: а) абстрактные(по умолчанию)
+        //                                               б) статические
+        //                                               в) дефолтные(с реализацией)
 
 
         //абстрактные методы:
@@ -632,9 +635,15 @@ public class Main {
         Flyable flyable = new Bird();
         flyable.fly();
 
+        //my fun for practice
+        Football footballPlayer1 = new FootballImpl();
+        footballPlayer1.addPlayer();
+        Football footballCoach = new FootballCoach();
+        footballCoach.addPlayer();
 
-
-
+        List<Football> footballList = new ArrayList<>();
+        footballList.add(footballPlayer1);
+        footballList.add(footballCoach);
 
 
         System.out.println("\n\n\n//15. Интерфейсы часть 2. Анонимные классы.");
